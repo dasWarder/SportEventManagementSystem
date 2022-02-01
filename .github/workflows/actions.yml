@@ -1,4 +1,7 @@
-name: MYWorkflow
+name: MyWorkflow
+env:
+  APPLICATION_NAME: "SportEventManagementSystem"
+  COMMIT_INFO: "${{ env.APPLICATION_NAME}}: commit ${{ github.sha }}"
 
 on:
   push:
@@ -16,7 +19,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Run Maven test
-      run: mvn -B test --file pom.xml
+      run: mvn test --file pom.xml
       
   build:
     runs-on: ubuntu-latest
@@ -29,5 +32,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-      - name: Rub Maven Build
+      - name: Show commit name
+        run: echo "${{ env.COMMIT_INFO }}"
+      - name: Run Maven Build
         run: mvn install --file pom.xml
