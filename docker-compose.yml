@@ -1,0 +1,25 @@
+version: '3.1'
+
+services:
+
+  postgre:
+    image: postgres:12-alpine3.15
+    restart: always
+    ports:
+    - '2345:5432'
+    environment:
+      POSTGRES_USER: ${POSTGRE_USER}
+      POSTGRES_PASSWORD: ${POSTGRE_PASS}
+      POSTGRES_DB: events
+    volumes:
+      - db-data:/var/lib/postgres/data
+    networks:
+      - main
+
+
+volumes:
+  db-data:
+
+networks:
+  main:
+    driver: bridge
