@@ -32,7 +32,7 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
           cache: maven
-      - name: Show commit name
-        run: echo "${{ env.COMMIT_INFO }}"
+      - name: Show commit sha
+        run: "${{ env.COMMIT_INFO }}"
       - name: Run Maven Build
-        run: mvn install --file pom.xml
+        run: mvn clean install --file pom.xml
