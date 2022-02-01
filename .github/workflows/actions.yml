@@ -35,4 +35,4 @@ jobs:
       - name: Show commit sha
         run: echo "${{ env.COMMIT_INFO }}"
       - name: Run Maven Build
-        run: mvn clean install --file pom.xml
+        run: mvn clean install --file pom.xml -Dmaven.test.skip=true
