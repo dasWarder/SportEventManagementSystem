@@ -1,7 +1,7 @@
 name: MyWorkflow
 env:
   APPLICATION_NAME: "SportEventManagementSystem"
-  COMMIT_INFO: "${{ env.APPLICATION_NAME}}: commit ${{ github.sha }}"
+  COMMIT_INFO: "SportEventManagementSystem: commit ${{ github.sha }}"
 
 on:
   push:
