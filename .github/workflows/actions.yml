@@ -33,6 +33,6 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Show commit sha
-        run: "${{ env.COMMIT_INFO }}"
+        run: echo "${{ env.COMMIT_INFO }}"
       - name: Run Maven Build
         run: mvn clean install --file pom.xml
