@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: SportEventManagementSystem
+  profiles:
+    active: @spring.profiles.active@
+
+server:
+  port: 1000

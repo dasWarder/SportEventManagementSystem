@@ -43,16 +43,8 @@ public class Usr {
 
   @ManyToMany(fetch = FetchType.LAZY)
   @JoinTable(
-          name = "usr_event",
-          joinColumns = {@JoinColumn(name = "usr_id")},
-          inverseJoinColumns = {@JoinColumn(name = "event_id")})
+      name = "usr_event",
+      joinColumns = {@JoinColumn(name = "usr_id")},
+      inverseJoinColumns = {@JoinColumn(name = "event_id")})
   private Set<Event> events;
-
-  @ManyToOne(fetch = FetchType.LAZY)
-  @JoinColumn(name = "organization_id")
-  private Organization organization;
-
-  private void addEvent(Event event) {
-    this.events.add(event);
-  }
 }

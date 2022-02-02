@@ -41,5 +41,5 @@ public class Organization {
   private Set<Event> events;
 
   @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "organization")
-  private Set<Usr> users;
+  private Set<Profile> profiles;
 }
