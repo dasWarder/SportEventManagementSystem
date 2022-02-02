@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    username: ${POSTGRE_USER}
+    password: ${POSTGRE_PASS}
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:2345/events
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+    show-sql: true
