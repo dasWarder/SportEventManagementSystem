@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS usr;
+DROP SEQUENCE IF EXISTS usr_seq;
+
+CREATE SEQUENCE usr_seq START WITH 1;
+
+CREATE TABLE usr (
+    id  BIGINT PRIMARY KEY NOT NULL DEFAULT nextval('usr_seq'),
+    email VARCHAR NOT NULL UNIQUE,
+    password VARCHAR NOT NULL,
+    enabled BOOLEAN DEFAULT TRUE,
+    registration_date TIMESTAMP NOT NULL
+);

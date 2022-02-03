@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.babichev.model;
 
 import lombok.*;
 
@@ -24,6 +24,7 @@ public class Event {
   @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "event_seq")
   private Long id;
 
+  @Column(name = "sport_name")
   private String sportName;
 
   private String location;

@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.babichev.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -23,6 +23,7 @@ public class Address {
 
   private String city;
 
+  @Column(name = "extra_info")
   private String extraInfo;
 
   private Long zip;

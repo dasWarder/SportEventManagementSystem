@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.babichev.model;
 
 import lombok.*;
 
@@ -34,6 +34,8 @@ public class Usr {
   @Column(name = "registration_date")
   private LocalDateTime registrationDate;
 
+  private boolean enabled;
+
   @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
   @JoinTable(
       name = "usr_role",
@@ -47,4 +49,8 @@ public class Usr {
       joinColumns = {@JoinColumn(name = "usr_id")},
       inverseJoinColumns = {@JoinColumn(name = "event_id")})
   private Set<Event> events;
+
+  @PrimaryKeyJoinColumn
+  @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+  private Profile profile;
 }

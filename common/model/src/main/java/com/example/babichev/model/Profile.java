@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.babichev.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,8 +19,10 @@ public class Profile {
     @Column(name = "usr_id")
     private Long id;
 
+    @Column(name = "first_name")
     private String firstName;
 
+    @Column(name = "last_name")
     private String lastName;
 
     private Long age;

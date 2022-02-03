@@ -1,4 +1,4 @@
-package com.example.model;
+package com.example.babichev.model;
 
 import lombok.*;
 
@@ -39,7 +39,4 @@ public class Organization {
       orphanRemoval = true,
       mappedBy = "organization")
   private Set<Event> events;
-
-  @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL, mappedBy = "organization")
-  private Set<Profile> profiles;
 }
