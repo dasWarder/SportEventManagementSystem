@@ -9,8 +9,8 @@ CREATE TABLE event (
     location VARCHAR NOT NULL DEFAULT '',
     date TIMESTAMP NOT NULL,
     first_place_prize VARCHAR DEFAULT '',
-    second_name_prize VARCHAR DEFAULT '',
-    third_name_prize VARCHAR DEFAULT '',
+    second_place_prize VARCHAR DEFAULT '',
+    third_place_prize VARCHAR DEFAULT '',
     organization_id BIGINT NOT NULL,
     FOREIGN KEY(organization_id) REFERENCES organization(id)
 );

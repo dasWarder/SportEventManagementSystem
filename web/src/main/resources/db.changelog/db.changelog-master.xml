@@ -16,4 +16,12 @@
     <include file="classpath:db.changelog/v1/create_event_table.sql"/>
     <include file="classpath:db.changelog/v1/create_address_table.sql"/>
     <include file="classpath:db.changelog/v1/create_usr_event_table.sql"/>
+    <include file="classpath:db.changelog/v1/populate_usr_table.sql"/>
+    <include file="classpath:db.changelog/v1/populate_role_table.sql"/>
+    <include file="classpath:db.changelog/v1/populate_usr_role_table.sql"/>
+    <include file="classpath:db.changelog/v1/populate_profile_table.sql"/>
+    <include file="classpath:db.changelog/v1/populate_organization_table.sql"/>
+    <include file="classpath:db.changelog/v1/populate_event_table.sql"/>
+    <include file="classpath:db.changelog/v1/populate_address_table.sql"/>
+
 </databaseChangeLog>
